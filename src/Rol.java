@@ -13,7 +13,6 @@ public class Rol {
     public int getIdRol() {
         return idRol;
     }
-
     public void setIdRol(int idRol) {
         this.idRol = idRol;
     }

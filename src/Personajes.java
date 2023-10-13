@@ -14,6 +14,7 @@ public class Personajes extends JFrame{
     private JTextField destrezaText;
     private JTextField inteligenciaText;
     private JList lista;
+    private JLabel label;
     private JComboBox comboRol;
     private JButton modificarBtn;
     private JButton eliminarBtn;
@@ -172,7 +173,6 @@ public static void main (String[] args){
         try {
             con= DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/juegorol","root","");
             System.out.println("Conectado");
-//            cargarCombo(comboRol);
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -180,25 +180,4 @@ public static void main (String[] args){
 
     }
 
-//    private void cargarCombo(JComboBox c) {
-//
-//        DefaultComboBoxModel combo = new DefaultComboBoxModel();
-//        c.setModel(combo);
-//        Listado_Roles lr = new Listado_Roles();
-//        try {
-//            Statement st = con.createStatement();
-//            ResultSet rs = st.executeQuery("select nombreRol from Rol");
-//            while (rs.next()){
-//                Rol ro = new Rol();
-//                ro.setNombreRol(rs.getString(1));
-//
-//                lr.AgregarRol(ro);
-//                combo.addElement(ro.getNombreRol());
-//                    System.out.println("EXITO");
-//            }
-//        } catch (SQLException e) {
-//            System.out.println("ERROR"+e);
-//        }
-//
-//    }
 }
