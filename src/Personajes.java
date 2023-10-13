@@ -97,6 +97,7 @@ public Personajes(){
     }
 
  }
+
  public void insertar() throws SQLException {
     conectar();
 
