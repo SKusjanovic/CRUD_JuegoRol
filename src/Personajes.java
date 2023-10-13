@@ -169,6 +169,12 @@ public class Personajes extends JFrame{
             mod.addElement("¡Eliminado exitosamente!");
 
             idText.setText("");
+        }else {
+            lista.setModel(mod);
+            mod.removeAllElements();
+            mod.addElement("¡Error al eliminar!");
+
+            idText.setText("");
         }
     }
 
