@@ -8,14 +8,12 @@ public class Personajes extends JFrame{
     private JPanel panel;
     private JTextField idText;
     private JTextField nicknameText;
-    private JTextField apellidoText;
     private JTextField fuerzaText;
     private JButton consultarBtn;
     private JButton ingresarBtn;
     private JTextField destrezaText;
     private JTextField inteligenciaText;
     private JList lista;
-    private JLabel label;
     private JComboBox comboRol;
     private JButton modificarBtn;
     private JButton eliminarBtn;
