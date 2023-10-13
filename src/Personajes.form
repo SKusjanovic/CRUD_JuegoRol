@@ -211,7 +211,7 @@
             </constraints>
             <properties>
               <font name="Arial Black" size="20" style="1"/>
-              <text value="Crud - Personajes"/>
+              <text value="CRUD - Personajes"/>
             </properties>
           </component>
           <vspacer id="3fc69">
