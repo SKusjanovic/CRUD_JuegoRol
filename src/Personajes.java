@@ -18,6 +18,7 @@ public class Personajes extends JFrame{
     private JComboBox comboRol;
     private JButton modificarBtn;
     private JButton eliminarBtn;
+    private JLabel icono;
     Connection con;
     PreparedStatement ps;
     Statement st;
@@ -37,7 +38,7 @@ public class Personajes extends JFrame{
                 }catch (SQLException ex){
                     lista.setModel(mod);
                     mod.removeAllElements();
-                    mod.addElement("¡Error al listar");
+                    mod.addElement("¡Error al listar!");
                     throw new RuntimeException(ex);
                 }
             }
