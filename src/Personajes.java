@@ -42,21 +42,20 @@ public class Personajes extends JFrame{
                     throw new RuntimeException(ex);
                 }
             }
-
         });
 
         //Botón ingresar
         ingresarBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            try{
-                insertar();
-            }catch (SQLException ex){
-                lista.setModel(mod);
-                mod.removeAllElements();
-                mod.addElement("¡Error al registrar!");
-                throw new RuntimeException(ex);
-            }
+                try{
+                    insertar();
+                }catch (SQLException ex){
+                    lista.setModel(mod);
+                    mod.removeAllElements();
+                    mod.addElement("¡Error al registrar!");
+                    throw new RuntimeException(ex);
+                }
             }
         });
 
@@ -104,7 +103,6 @@ public class Personajes extends JFrame{
         while (result.next()){
             mod.addElement(result.getString(1)+ " | " + result.getString(2)+" | "+ result.getString(3)+" | Frz "+ result.getInt(4)+" | Int "+ result.getInt(5)+" | Des "+ result.getInt(6));
         }
-
      }
 
      //Registrar personaje
@@ -185,8 +183,6 @@ public class Personajes extends JFrame{
         g.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         g.setVisible(true);
         g.pack();
-
-
     }
 
     //Conexión con BBDD
@@ -199,7 +195,5 @@ public class Personajes extends JFrame{
             System.out.println("No conectado");
             throw new RuntimeException(e);
         }
-
     }
-
 }
